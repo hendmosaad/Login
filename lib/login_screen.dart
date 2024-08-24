@@ -106,8 +106,8 @@ class LoginScreen extends StatelessWidget {
       {required var formKey,
         required Widget Text,
         required dynamic function}) =>
-      GestureDetector(
-        onTap: function,
+      MaterialButton(onPressed:
+        () => {},
         child: Container(
           height: 50,
           width: double.infinity,
