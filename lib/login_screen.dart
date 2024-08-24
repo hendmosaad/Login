@@ -16,26 +16,30 @@ class LoginScreen extends StatelessWidget {
   }
   Widget bodyColumn ()=>
 
-      Padding(
-        padding: const EdgeInsetsDirectional.only(start: 20,end: 20),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text("Login",style:loginStyle(50,Colors.black) ,),
-            SizedBox(height:Constants.sizedBoxHeight ,),
-            loginField(formKey:formKey1,function: (){},labelText: "email",prefixIcon: Icons.email,keyboardType: TextInputType.emailAddress ,width: double.infinity,hieght: 50 ),
-            SizedBox(height:Constants.sizedBoxHeight ,),
-            loginField(formKey:formKey2,function: (){},labelText: "password", prefixIcon: Icons.lock,suffixIcon: Icons.remove_red_eye_outlined,keyboardType: TextInputType.visiblePassword,width:double.infinity ,hieght: 50 ),
-            SizedBox(height:Constants.sizedBoxHeight ,),
-            SizedBox(height:Constants.sizedBoxHeight ,),
-            loginButton(formKey: formKey3, Text: Text("Login",style: loginStyle(20,Colors.black),), function: (){}),
-            SizedBox(height:Constants.sizedBoxHeight ,),
-            forgetPassButton()
+      Center(
+        child: Padding(
+          padding: const EdgeInsetsDirectional.only(start: 20,end: 20),
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text("Login",style:loginStyle(50,Colors.black) ,),
+                SizedBox(height:Constants.sizedBoxHeight ,),
+                loginField(formKey:formKey1,function: (){},labelText: "email",prefixIcon: Icons.email,keyboardType: TextInputType.emailAddress ,width: double.infinity,hieght: 50 ),
+                SizedBox(height:Constants.sizedBoxHeight ,),
+                loginField(formKey:formKey2,function: (){},labelText: "password", prefixIcon: Icons.lock,suffixIcon: Icons.remove_red_eye_outlined,keyboardType: TextInputType.visiblePassword,width:double.infinity ,hieght: 50 ),
+                SizedBox(height:Constants.sizedBoxHeight ,),
+                SizedBox(height:Constants.sizedBoxHeight ,),
+                loginButton(formKey: formKey3, Text: Text("Login",style: loginStyle(20,Colors.black),), function: (){}),
+                SizedBox(height:Constants.sizedBoxHeight ,),
+                forgetPassButton()
 
 
 
-          ],
+              ],
+            ),
+          ),
         ),
       );
   TextStyle loginStyle(double size,Color color)=>
