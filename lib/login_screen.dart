@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart' hide BoxDecoration, BoxShadow;
 import 'package:flutter_inset_box_shadow/flutter_inset_box_shadow.dart';
-import 'package:login_screen/constants.dart';
 class LoginScreen extends StatelessWidget {
   LoginScreen({super.key});
   var formKey1=GlobalKey<FormState>();
