@@ -62,8 +62,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 SizedBox(height:sizedBoxHeight ,),
                 SizedBox(height:sizedBoxHeight ,),
                 loginButton(formKey: formKey3, Text: Text("Login",style: loginStyle(20,Colors.black),), function: (){
-                 if( formKey1.currentState!.validate())
-                   print('good');
+                  formKey1.currentState!.validate();
+
+
                   formKey2.currentState!.validate();
                 }),
                 SizedBox(height:sizedBoxHeight ),
