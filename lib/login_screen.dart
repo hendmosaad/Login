@@ -58,45 +58,43 @@ class LoginScreen extends StatelessWidget {
        required double hieght,
        required double? width
       }) =>
-      GestureDetector(
-        onTap: function,
-        child: Container(
-          height:hieght,
-          width: width,
-          alignment: Alignment.center,
-          decoration: BoxDecoration(
-              color: Colors.grey[100],
-              borderRadius: BorderRadius.circular(10),
-              boxShadow: [
-                boxShadowItem(),
-                boxShadowItem(),
-                boxShadowItem(),
-                boxShadowItem()
-              ]),
-       child:   TextFormField(
-            validator: (value) {
-              if (value!.isEmpty) {
-                return 'this field an\'t be null';
-              }
-            },
-            decoration: InputDecoration(
-                hintText: labelText,
-                hintStyle: TextStyle(
-                    fontSize: 15
-                ),
-                border: InputBorder.none,
-                prefixIcon: Icon(
-                  prefixIcon,
-                  size: 18,
-                  color: Colors.black54,
-                ),
-                suffixIcon: Icon(
-                  suffixIcon,
-                  color: Colors.black54,
-                  size: 18,
-                )),
-        ),
-      ));
+      Container(
+        height:hieght,
+        width: width,
+        alignment: Alignment.center,
+        decoration: BoxDecoration(
+            color: Colors.grey[100],
+            borderRadius: BorderRadius.circular(10),
+            boxShadow: [
+              boxShadowItem(),
+              boxShadowItem(),
+              boxShadowItem(),
+              boxShadowItem()
+            ]),
+             child:   TextFormField(
+          validator: (value) {
+            if (value!.isEmpty) {
+              return 'this field an\'t be null';
+            }
+          },
+          decoration: InputDecoration(
+              hintText: labelText,
+              hintStyle: TextStyle(
+                  fontSize: 15
+              ),
+              border: InputBorder.none,
+              prefixIcon: Icon(
+                prefixIcon,
+                size: 18,
+                color: Colors.black54,
+              ),
+              suffixIcon: Icon(
+                suffixIcon,
+                color: Colors.black54,
+                size: 18,
+              )),
+      ),
+            );
   BoxShadow boxShadowItem()=> BoxShadow(
       inset: false,
       offset: Offset(3, 10),
