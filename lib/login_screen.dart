@@ -33,7 +33,9 @@ class LoginScreen extends StatelessWidget {
                 SizedBox(height:sizedBoxHeight ,),
                 loginButton(formKey: formKey3, Text: Text("Login",style: loginStyle(20,Colors.black),), function: (){}),
                 SizedBox(height:sizedBoxHeight ,),
-                forgetPassButton()
+                Align(
+                  alignment: Alignment.center,
+                    child: forgetPassButton())
 
 
 
