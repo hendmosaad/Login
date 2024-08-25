@@ -6,6 +6,7 @@ class LoginScreen extends StatelessWidget {
   var formKey1=GlobalKey<FormState>();
   var formKey2=GlobalKey<FormState>();
   var formKey3=GlobalKey<FormState>();
+   double sizedBoxHeight=15.0;
 
   @override
   Widget build(BuildContext context) {
@@ -25,14 +26,14 @@ class LoginScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text("Login",style:loginStyle(50,Colors.black) ,),
-                SizedBox(height:Constants.sizedBoxHeight ,),
+                SizedBox(height:sizedBoxHeight ,),
                 loginField(formKey:formKey1,function: (){},labelText: "email",prefixIcon: Icons.email,keyboardType: TextInputType.emailAddress ,width: double.infinity,hieght: 50 ),
-                SizedBox(height:Constants.sizedBoxHeight ,),
+                SizedBox(height:sizedBoxHeight ,),
                 loginField(formKey:formKey2,function: (){},labelText: "password", prefixIcon: Icons.lock,suffixIcon: Icons.remove_red_eye_outlined,keyboardType: TextInputType.visiblePassword,width:double.infinity ,hieght: 50 ),
-                SizedBox(height:Constants.sizedBoxHeight ,),
-                SizedBox(height:Constants.sizedBoxHeight ,),
+                SizedBox(height:sizedBoxHeight ,),
+                SizedBox(height:sizedBoxHeight ,),
                 loginButton(formKey: formKey3, Text: Text("Login",style: loginStyle(20,Colors.black),), function: (){}),
-                SizedBox(height:Constants.sizedBoxHeight ,),
+                SizedBox(height:sizedBoxHeight ,),
                 forgetPassButton()
 
 
